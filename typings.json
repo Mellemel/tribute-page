@@ -1,0 +1,9 @@
+{
+    "name": "tribute-page",
+    "dependencies": {},
+    "globalDependencies": {
+        "browser-sync": "registry:dt/browser-sync#0.0.0+20160524142403",
+        "gulp": "registry:dt/gulp#3.8.0+20160724062653",
+        "node": "registry:dt/node#6.0.0+20160720070758"
+    }
+}
