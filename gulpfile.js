@@ -10,17 +10,20 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create()
 
 gulp.task('serve', () => {
-    startServer('production')
-})
+    browserSync.init({
+        server: {
+            baseDir: './builds/production/'
+        }
+    })
 
-gulp.task('serve:development', () => {
-    startServer('development')
+    gulp.watch('./builds/production/images/**')
+        .on('change', browserSync.reload)
 })
 
 gulp.task('watch', ['jade', 'sass', 'imageMin'], () => {
     gulp.watch('./src/*.jade', ['jade'])
     gulp.watch('./src/*.scss', ['sass'])
-    gulp.watch('./src/*', ['imageMin'])
+    gulp.watch('./src/images/*', ['imageMin'])
 })
 
 gulp.task('jade', () => {
@@ -36,8 +39,8 @@ gulp.task('sass', () => {
     return gulp.src('./src/*.scss')
         .pipe(sourceMaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(sourceMaps.write('./builds/development'))
         .pipe(gulp.dest('./builds/development'))
-        .pipe(sourceMaps.write('./builds/development/maps'))
         .pipe(cleanCSS({ debug: true }, (details) => {
             console.log(details.name + ': ' + details.stats.originalSize)
             console.log(details.name + ': ' + details.stats.minifiedSize)
@@ -52,15 +55,3 @@ gulp.task('imageMin', () => {
         .pipe(gulp.dest('./builds/development/images'))
         .pipe(gulp.dest('./builds/production/images'))
 })
-
-function startServer(type) {
-    var env = type
-    browserSync.init({
-        server: {
-            baseDir: './builds/' + env + '/'
-        }
-    })
-
-    gulp.watch('./builds/' + env + '/images/**')
-        .on('change', browserSync.reload)
-}
