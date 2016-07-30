@@ -1,0 +1,19 @@
+@import "bootstrap";
+
+@font-face {
+    font-family: 'game-of-thrones';
+    src: url('../fonts/game-of-thrones.ttf') format('ttf'),
+         url('../fonts/game-of-thrones.woff') format('woff'),
+         url('../fonts/game-of-thrones.woff2') format('woff2');
+}
+
+body {
+    font-family: 'game-of-thrones', Geneva, Tahoma, sans-serif;
+    background: url("../images/house-targaryen-symbol.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#main {
+    background-color: rgba(51, 51, 51, 0.5);
+    margin-top: 30px;
+}
