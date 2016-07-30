@@ -21,16 +21,16 @@ gulp.task('serve', () => {
         }
     })
 
-    gulp.watch('./builds/production/images/**')
+    gulp.watch(['./builds/production/images/**/*', './builds/production/js/**/*'])
         .on('change', browserSync.reload)
 })
 
 gulp.task('watch', ['jade', 'sass', 'imageMin', 'jsmin', 'movefont'], () => {
     gulp.watch('./src/*.jade', ['jade'])
-    gulp.watch('./src/*.scss', ['sass'])
-    gulp.watch('./src/images/*', ['imageMin'])
-    gulp.watch('./src/js/*.js', ['jsmin'])
-    gulp.watch('./src/fonts/*', ['movefont'])
+    gulp.watch('./src/scss/**/*.scss', ['sass'])
+    gulp.watch('./src/images/**/*.*', ['imageMin'])
+    gulp.watch('./src/js/**/*.js', ['jsmin'])
+    gulp.watch('./src/fonts/**/*.*', ['movefont'])
 })
 
 gulp.task('jade', () => {
@@ -55,22 +55,23 @@ gulp.task('sass', () => {
 })
 
 gulp.task('imageMin', () => {
-    return gulp.src('./src/images/*')
+    return gulp.src('./src/images/**/*.*')
         .pipe(imageMin({ verbose: true }))
         .pipe(gulp.dest('./builds/development/images'))
         .pipe(gulp.dest('./builds/production/images'))
 })
 
 gulp.task('jsmin', () => {
-    return gulp.src('./src/js/*.js')
+    return gulp.src('./src/js/**/*.js')
         .pipe(gulp.dest('./builds/development/js'))  
         .pipe(jsmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./builds/production/js'))
+        .pipe(browserSync.stream())
 })
 
 gulp.task('movefont', ()=>{
-    return gulp.src('./src/fonts/*')
+    return gulp.src('./src/fonts/**/*.*')
         .pipe(gulp.dest('./builds/development/font'))
         .pipe(gulp.dest('./builds/production/font'))
 })
