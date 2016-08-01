@@ -12,8 +12,26 @@ html(lang='en')
         script(src='./js/bootstrap.min.js')
     body
         .container.text-center
-            h1 Jon Snow
-            h2 The True Heir to the Iron Throne 
+            h1 Jon Snow for President
+            h2 The True Heir to the Iron Throne
+
+            #myCarousel.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li.active(data-target='myCarousel', data-slide-to='0')
+                    li(data-target='myCarousel', data-slide-to='1') 
+                    li(data-target='myCarousel', data-slide-to='2') 
+                    li(data-target='myCarousel', data-slide-to='3') 
+            
+                .carousel-inner(role='listbox')
+                    .item.active
+                        img(src='./images/jon-snow-6-seasons.jpg' alt='Jon Snow')
+                    .item
+                        img(src='./images/jon-snow-giving-speech.jpg' alt='Jon Snow')
+                    .item
+                        img(src='./images/jon-snow-fighting-white-walker.jpg' alt='Jon Snow')
+                    .item
+                        img(src='./images/samwell-tarly.jpg' alt='Samwell-tarly')
+                        
             .row#main
                 .col-md-8.col-md-offset-2
                     img(src='./images/you-know-nothing.gif', alt='Ygritte saying You know nothing') 
