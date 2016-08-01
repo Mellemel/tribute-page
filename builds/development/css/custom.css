@@ -5820,10 +5820,17 @@ button.close {
 
 body {
   font-family: 'game-of-thrones', Geneva, Tahoma, sans-serif;
-  background: url("../images/house-targaryen-symbol.png") no-repeat center center fixed;
-  background-size: cover;
-  color: white; }
+  background-color: #707070;
+  color: #dbd9d9; }
 
-#main {
-  background-color: rgba(150, 51, 51, 0.75);
-  margin-top: 30px; }
+h1, h2 {
+  font-weight: 700;
+  text-shadow: 2px 2px black; }
+
+.carousel {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden; }
+  .carousel .item img {
+    width: 100%;
+    height: auto; }
