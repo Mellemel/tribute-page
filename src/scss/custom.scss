@@ -3,11 +3,10 @@
 @font-face {
     font-family: 'game-of-thrones';
     src: url('../fonts/game-of-thrones.ttf') format('truetype');
-    font-weight: 900;
     font-style: normal;
 }
 
-$textcolor: #2471bb;
+$textcolor: #c8c8c8;
 $backgroundcolor: #707070;
 
 body {
@@ -16,7 +15,7 @@ body {
 }
 
 h1, h2, h3 {
-    text-shadow: 1px 3px black;
+    text-shadow: 2px 2px 1px #000;
 }
 
 .carousel {
@@ -24,6 +23,9 @@ h1, h2, h3 {
     min-height: 200px;
     max-height: 375px;
     overflow: hidden;
+    border: 2px solid #c8c8c8;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px #000;
 
     .item img {
         width: 100%;
@@ -32,18 +34,10 @@ h1, h2, h3 {
     }
 }
 
-#main{
+#main {
     background-color: $backgroundcolor;
     color: $textcolor;
-    box-shadow: 0 0 10px 10px #424242;
+    box-shadow: 0 0 2px 2px #d1d1d1;
     padding-top: 20px;
-}
-
-#seconday {
-    background-color: $textcolor;
-    color: $backgroundcolor;
-}
-
-span {
-    font-size: 55px;
+    padding-bottom: 10px;
 }
