@@ -5841,7 +5841,15 @@ h1, h2, h3 {
 
 #main {
   background-color: #707070;
-  color: #c8c8c8;
+  color: #dadada;
   box-shadow: 0 0 2px 2px #d1d1d1;
   padding-top: 20px;
-  padding-bottom: 10px; }
+  padding-bottom: 20px; }
+
+.btn {
+  background-color: #dadada; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, #dadadd, transparent); }

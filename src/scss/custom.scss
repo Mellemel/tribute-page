@@ -6,7 +6,7 @@
     font-style: normal;
 }
 
-$textcolor: #c8c8c8;
+$textcolor: #dadada;
 $backgroundcolor: #707070;
 
 body {
@@ -39,5 +39,15 @@ h1, h2, h3 {
     color: $textcolor;
     box-shadow: 0 0 2px 2px #d1d1d1;
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.btn {
+    background-color: $textcolor;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(85.5%,85.5%,86.6%,85), rgba(0,0,0,0));
 }
