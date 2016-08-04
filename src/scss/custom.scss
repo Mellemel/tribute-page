@@ -2,29 +2,48 @@
 
 @font-face {
     font-family: 'game-of-thrones';
-    src: url('../fonts/game-of-thrones.ttf') format('ttf'),
-         url('../fonts/game-of-thrones.woff') format('woff'),
-         url('../fonts/game-of-thrones.woff2') format('woff2');
+    src: url('../fonts/game-of-thrones.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
+
+$textcolor: #2471bb;
+$backgroundcolor: #707070;
 
 body {
-    font-family: 'game-of-thrones', Geneva, Tahoma, sans-serif;
-    background-color: #707070;
-    color: #dbd9d9;
+    font-family: 'game-of-thrones' !important;
+    background-color: #161616;
 }
 
-h1, h2 {
-    font-weight: 700;
-    text-shadow: 2px 2px black;
+h1, h2, h3 {
+    text-shadow: 1px 3px black;
 }
 
 .carousel {
     width: 100%;
-    max-height: 500px;
+    min-height: 200px;
+    max-height: 375px;
     overflow: hidden;
 
     .item img {
         width: 100%;
+        min-height: 200px;
         height: auto;
     }
+}
+
+#main{
+    background-color: $backgroundcolor;
+    color: $textcolor;
+    box-shadow: 0 0 10px 10px #424242;
+    padding-top: 20px;
+}
+
+#seconday {
+    background-color: $textcolor;
+    color: $backgroundcolor;
+}
+
+span {
+    font-size: 55px;
 }
