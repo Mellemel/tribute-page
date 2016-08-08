@@ -25,12 +25,12 @@ gulp.task('serve', () => {
         .on('change', browserSync.reload)
 })
 
-gulp.task('watch', ['jade', 'sass', 'imageMin', 'jsmin', 'movefont'], () => {
+gulp.task('watch', ['jade', 'sass', 'imageMin', 'jsmin', 'movefonts'], () => {
     gulp.watch('./src/*.jade', ['jade'])
     gulp.watch('./src/scss/**/*.scss', ['sass'])
     gulp.watch('./src/images/**/*.*', ['imageMin'])
     gulp.watch('./src/js/**/*.js', ['jsmin'])
-    gulp.watch('./src/fonts/**/*.*', ['movefont'])
+    gulp.watch('./src/fonts/**/*.*', ['movefonts'])
 })
 
 gulp.task('jade', () => {
@@ -70,8 +70,8 @@ gulp.task('jsmin', () => {
         .pipe(browserSync.stream())
 })
 
-gulp.task('movefont', ()=>{
+gulp.task('movefonts', ()=>{
     return gulp.src('./src/fonts/**/*.*')
-        .pipe(gulp.dest('./builds/development/font'))
-        .pipe(gulp.dest('./builds/production/font'))
+        .pipe(gulp.dest('./builds/development/fonts'))
+        .pipe(gulp.dest('./builds/production/fonts'))
 })
