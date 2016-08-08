@@ -5816,15 +5816,32 @@ button.close {
 
 @font-face {
   font-family: 'game-of-thrones';
-  src: url("../fonts/game-of-thrones.ttf") format("truetype");
-  font-style: normal; }
+  src: url("/fonts/game-of-thrones.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'forum-regular';
+  src: url("/fonts/forum-regular.ttf") format("truetype"); }
 
 body {
   font-family: 'game-of-thrones' !important;
   background-color: #161616; }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   text-shadow: 2px 2px 1px #000; }
+  h1 small, h2 small, h3 small, h4 small, h5 small {
+    line-height: 150%;
+    margin-top: 15px;
+    color: #dadada;
+    display: block; }
+
+h3 {
+  margin-top: 0; }
+
+p, li {
+  font-family: 'forum-regular';
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px #000;
+  letter-spacing: 1px; }
 
 .carousel {
   width: 100%;
@@ -5845,6 +5862,10 @@ h1, h2, h3 {
   box-shadow: 0 0 2px 2px #d1d1d1;
   padding-top: 20px;
   padding-bottom: 20px; }
+  @media screen and (min-width: 768px) {
+    #main {
+      margin-top: 25px;
+      margin-bottom: 25px; } }
 
 .btn {
   background-color: #dadada; }
@@ -5853,3 +5874,16 @@ hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, transparent, #dadadd, transparent); }
+
+span {
+  font-size: 40px; }
+
+blockquote {
+  padding: 2px 0px;
+  font-size: inherit;
+  background-color: #4d4d4d; }
+
+li > span {
+  font-size: inherit;
+  position: relative;
+  left: -5px; }

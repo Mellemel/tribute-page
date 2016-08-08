@@ -7,7 +7,8 @@ html(lang='en')
 
         title= 'Tribute Page to Jon Snow'
 
-        link(href='css/custom.css', rel='stylesheet')
+        link(href='./images/favicon.ico', rel='icon', tpye='image/x-icon')
+        link(href='./css/custom.css', rel='stylesheet')
         script(src='./js/jquery.min.js')
         script(src='./js/bootstrap.min.js')
     body
@@ -20,7 +21,6 @@ html(lang='en')
                             li(data-target='myCarousel', data-slide-to='1') 
                             li(data-target='myCarousel', data-slide-to='2') 
                             li(data-target='myCarousel', data-slide-to='3') 
-
                         .carousel-inner(role='listbox')
                             .item.active
                                 img(src='./images/jon-snow-6-seasons.jpg', alt='Jon Snow')
@@ -37,8 +37,28 @@ html(lang='en')
                         a.right.carousel-control(href='#myCarousel',        role='button',data-slide='next')
                             span.icon-next(aria-hidden='true')
                             span.sr-only next
-                    h1 Jon Snow
-                    h3 The true heir to the iron throne
+
+                    h1 Jon Snow#[small The true heir to the iron throne]
                     hr
-                    
-                    a.btn.btn-default(href='http://gameofthrones.wikia.com/wiki/Jon_Snow', role='Button') More Info
+                    h3 who is john snow #[span ?]
+
+                    .row
+                        .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
+                            p Jon Snow is one of the main characters in the book and tv show series, Game of Thrones. He is first introduced as the fourteen year old bastard son of Eddard (Ned) Stark, The Lord of Winterfell, with the identity of his mother unknown. When asked, Ned refuses to admit her name to anyone, although he did mention to Robert Baratheon, the lord of the seven realms, that her name was Wylla, a servent in the employ of House Dayne of Dorne.
+
+                            blockquote
+                                p The surname Snow is given to all the bastard children of the north.
+
+                            p Being raised a Stark and a Northerner, he embodies many of their attributes. Most Notably:
+                            
+                            ol
+                                li #[span He is a great swordsman and a horse rider. ]
+                                li #[span He has a perceptive and observant outlook. ]
+                                li #[span Display of bravery, resourcefulness and quick thinking. ]
+                                li #[span He keeps his faith in the old Gods. ]
+
+                            p Jon's family consists of 5 siblings. His older half-brother, Robb, Two younger half-sisters, Sansa and Arya, and two younger half-brothers, Bran and Rickon. While Jon bonded well with his half-siblings, he was often the reason why Eddard and Catelyn argued because he was a constant reminder of Eddard's infidelity. Tyrion Lannister points out that he has more stark features than any of his half brothers with a lean build, dark brown hair and grey eyes that 'border on black'.
+
+                            p For more info, please press the button below.
+
+                    a.btn.btn-default(href='http://awoiaf.westeros.org/index.php/Jon_Snow', role='Button') More Info
