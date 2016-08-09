@@ -39,6 +39,10 @@ p, li {
     letter-spacing: 1px;
 }
 
+li {
+    text-align: left;
+}
+
 .carousel {
     width: 100%;
     min-height: 200px;
@@ -91,5 +95,5 @@ blockquote {
 li > span {
     font-size: inherit;
     position: relative;
-    left: -5px;
+    left: 5px;
 }

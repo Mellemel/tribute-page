@@ -5843,6 +5843,9 @@ p, li {
   text-shadow: 1px 1px 1px #000;
   letter-spacing: 1px; }
 
+li {
+  text-align: left; }
+
 .carousel {
   width: 100%;
   min-height: 200px;
@@ -5886,4 +5889,4 @@ blockquote {
 li > span {
   font-size: inherit;
   position: relative;
-  left: -5px; }
+  left: 5px; }
