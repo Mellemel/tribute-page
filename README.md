@@ -1,12 +1,18 @@
 # Tribute page for Jon Snow
 
-This is tribute page for the one true king, **Jon Snow**.
+While this Git repo is a front-end project from http://wwww.freecodecamp.com, I figured I set this up and use this as my playground for whenever a new library or framework comes a long. Basically my sandbox =)
 
-I know I'm over developing this, but I am taking the chance to thoroughly learn gulp  and all the fancy streamlining dev work stuff.
+### Dev Tools / Tech Stack
++ Jade -> html
++ Sass -> CSS
++ Gulp
++ Vagrant
++ eslint
 
-Will update readme as I develop this repo. =D
+Incase you do use Visual Studio Code as your editor, I have used a jsconfig.json along with a typings.json file to help support its intellisense. 
 
-----------
-![You know nothing, Jon Snow.](http://67.media.tumblr.com/7469601972f65e2b2adb5f8aa5e846a5/tumblr_nda8kwrgTd1tfg6t4o1_500.gif)
+I used the 'gulp serve' task to serve static files using browsersync and I used 'gulp watch' to not only watch new files coming in and move them to the build directory but to also compile the Jade and Sass files.
 
-> I know nothing :(
+My vagrant set up consists of ubuntu/trust64 as the vm box. I have forwarded ports 8080/8081 on the host machine and 3000/3001 on the guest machine.
+
+Feel free to fork this and use this as your sandbox for your front-end projects.
