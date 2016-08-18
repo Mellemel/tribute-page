@@ -1,13 +1,11 @@
-@import "bootstrap";
-
 @font-face {
     font-family: 'game-of-thrones';
-    src: url('/fonts/game-of-thrones.ttf') format('truetype');
+    src: url('../fonts/game-of-thrones.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'forum-regular';
-    src: url('/fonts/forum-regular.ttf') format('truetype');
+    src: url('../fonts/forum-regular.ttf') format('truetype');
 }
 
 $textcolor: #dadada;
